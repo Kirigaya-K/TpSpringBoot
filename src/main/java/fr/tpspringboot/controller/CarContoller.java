@@ -49,7 +49,7 @@ public class CarContoller {
 			return new ResponseEntity<Car>(updateC, HttpStatus.OK);
 		}
 	
-	@DeleteMapping("cars/immatriculation")
+	@DeleteMapping("/cars/{immatriculation}")
 	public ResponseEntity<Car> deleteCar(@PathVariable String immatriculation)
 		{
 			Car deleteC = carService.deleteCar(immatriculation);
